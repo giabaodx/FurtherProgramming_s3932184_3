@@ -40,12 +40,6 @@
     <li>**Linux:** Installation instructions for Linux distributions vary. You can typically install the JDK using your distribution's package manager (e.g., `apt-get`, `yum`). Refer to your distribution's documentation for specific instructions.</li>
   </ul>
 
-  <h2>Verifying Java Installation</h2>
-
-  <p>Once you have installed Java, open a terminal or command prompt and type the following command:</p>
-
-  ```bash
-  java -version
   <h2>Running the System</h2>
 
   <ol>
