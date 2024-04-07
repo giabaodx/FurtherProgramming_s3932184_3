@@ -1,4 +1,4 @@
-# FurtherProgramming_s3932184_3
+# FurtherProgramming_s3932184
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +24,28 @@
 
   <h2>Requirements</h2>
 
-  <ul>
-    <li>Java development environment (JDK)</li>
+<ul>
+    <li>Java development environment (JDK) - **Java 11 or later recommended**</li>
   </ul>
 
+  <h2>Installing Java</h2>
+
+  <p>This system requires a Java Development Kit (JDK) version 11 or later to run. While JDK 21 was used for development, newer versions may offer improvements and bug fixes. We recommend using the latest stable version available.</p>
+
+  <p>To install Java, follow the steps provided by Oracle for your operating system:</p>
+
+  <ul>
+    <li>**Windows:** Visit the <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java SE Downloads page</a> on Oracle's website. Accept the license agreement and download the appropriate JDK installer for your Windows version (e.g., Windows x64). Run the installer and follow the on-screen instructions.</li>
+    <li>**macOS:** Visit the <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java SE Downloads page</a> on Oracle's website. Accept the license agreement and download the JDK for macOS package. Follow the installation instructions provided by Oracle for macOS.</li>
+    <li>**Linux:** Installation instructions for Linux distributions vary. You can typically install the JDK using your distribution's package manager (e.g., `apt-get`, `yum`). Refer to your distribution's documentation for specific instructions.</li>
+  </ul>
+
+  <h2>Verifying Java Installation</h2>
+
+  <p>Once you have installed Java, open a terminal or command prompt and type the following command:</p>
+
+  ```bash
+  java -version
   <h2>Running the System</h2>
 
   <ol>
