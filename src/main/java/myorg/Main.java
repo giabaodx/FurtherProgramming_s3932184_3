@@ -24,10 +24,15 @@ public class Main {
 
     // Create an instance of the claim manager for interacting with claims
     private static final ClaimProcessManagerImpl claimManager = new ClaimProcessManagerImpl();
+
+    // Lists to store loaded customer and insurance card data
     private static List<Customer> customers;
     private static List<InsuranceCard> insuranceCards;
+
+    // Scanner object for user input
     private static final Scanner scanner = new Scanner(System.in);
 
+    // This method associates insurance cards with customers based on card ID
     private static void associateInsuranceCardsWithCustomers() {
         Map<String, InsuranceCard> cardMap = new HashMap<>();
         for (InsuranceCard card : insuranceCards) {
@@ -40,7 +45,7 @@ public class Main {
             }
         }
     }
-    //The UI when starting the program
+    // Display the main menu to the user
     private static void showMenu() {
         System.out.println("\n--- Main Menu ---");
         System.out.println("1 - View All Customers");
@@ -53,7 +58,7 @@ public class Main {
         System.out.print("Enter a number to choose: ");
     }
 
-    //Add listAllCustomers method
+    // Method to list all customers
     private static void listAllCustomers() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -73,7 +78,7 @@ public class Main {
         }
     }
 
-    //Add listAllClaims method
+    // Method to list all claims
     private static void listAllClaims() {
         List<Claim> allClaims = claimManager.getAll();
         if (allClaims.isEmpty()) {
@@ -85,7 +90,7 @@ public class Main {
             );
         }
     }
-    //Add showClaimDetails method
+    // Method to show details of a specific claim
     private static void showClaimDetails() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a Claim ID: ");
@@ -97,7 +102,8 @@ public class Main {
             System.out.println("I'm sorry! The claim cannot be found.");
         }
     }
-    //Add addNewClaim method
+
+    // Method to add a new claim
     private static void addNewClaim() {
         try {
             System.out.println("Input the Claim ID: ");
@@ -138,7 +144,8 @@ public class Main {
             System.out.println("Error parsing the claim amount. Please enter a valid number.");
         }
     }
-    //Add updateClaim method
+
+    // Method to update a claim
     private static void updateClaim() {
         try {
             System.out.print("Enter the ID of the claim to update: ");
@@ -181,7 +188,8 @@ public class Main {
             System.out.println("Error parsing the claim amount. Please enter a valid number.");
         }
     }
-    //Add deleteClaim method
+
+    // Method to delete a claim
     private static void deleteClaim() {
         System.out.print("Enter the ID of the claim to delete: ");
         String claimId = scanner.nextLine();
@@ -194,7 +202,7 @@ public class Main {
         }
     }
 
-    //Save and update data
+    //Save and update data when users want to exit the system
     private static void saveDataAndExit() {
         try {
             System.out.println("Saving... Please wait.");
@@ -207,6 +215,7 @@ public class Main {
         }
     }
 
+    // The main entry point of the Insurance Claims Management System
     public static void main(String[] args) {
         try {
             customers = FileManager.readCustomers(CUSTOMERS_FILE_PATH);
